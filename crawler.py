@@ -1,13 +1,3 @@
-# https://www.google.com.hk/maps/search/{search string replace \s with "+"}/@22.326837,114.0903315,11.54z
-# search firstElement with className "section-result" and click
-# search button with className "allxGeDnJMl__button allxGeDnJMl__button-text" and click
-# search div with className "section-review ripple-container GLOBAL__gm2-body-2"
-# in the above div, search:
-# rating: className = "section-review-stars", value: aria-label="x stars"
-# review: className = "section-review-text"
-# reviewer name: className = "section-review-title", value = inner span.innerText
-
-
 import psycopg2
 from requests import get
 import re
@@ -165,12 +155,3 @@ def crawlReview(driver, rows):
 
 driver = configure_driver()
 crawlReview(driver, ['London Bridge', 'London Eye'])
-
-
-echo "# google-map-review-crawler" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/samor0412/google-map-review-crawler.git
-git push -u origin main
